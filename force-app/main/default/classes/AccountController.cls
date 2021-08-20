@@ -6,7 +6,7 @@ public with sharing class AccountController {
             FROM DataObj__c
             WHERE RecordDate__c = null
             WITH SECURITY_ENFORCED
-            ORDER BY FirstName__c
+            ORDER BY FirstName__c 
         ];
     }
 }
