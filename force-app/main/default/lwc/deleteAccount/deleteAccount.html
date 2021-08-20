@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Delete Contact Record in LWC">
+         <table border="1" cellspacing="0" cellpadding="5" style="border-collapse:collapse;">
+             <tr>
+                 <th>First Name</th>
+                 <th>Recorded Date</th>
+                 <th>Delete</th>
+             </tr>
+             <template for:each={accounts.data} for:item="accItem">
+                 <tr key={accItem.Id}>
+                     <td>{accItem.FirstName__c}</td>
+                     <td>{accItem.RecordDate__c}</td>
+                     <td><lightning-button label="Delete" onclick={handleContactDelete} value={accItem.Id} icon-name="utility:delete" icon-position="right"></lightning-button></td>
+                 </tr>
+             </template>
+         </table>
+    </lightning-card>
+</template>
